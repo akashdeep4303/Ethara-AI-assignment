@@ -1,0 +1,45 @@
+<svg width="1600" height="1200" viewBox="0 0 1600 1200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1600" height="1200" fill="#07111F"/>
+  <g opacity="0.9" filter="url(#blurA)">
+    <ellipse cx="343" cy="248" rx="300" ry="220" fill="#7C3AED"/>
+  </g>
+  <g opacity="0.75" filter="url(#blurB)">
+    <ellipse cx="1240" cy="290" rx="330" ry="250" fill="#0EA5E9"/>
+  </g>
+  <g opacity="0.62" filter="url(#blurC)">
+    <ellipse cx="825" cy="902" rx="420" ry="260" fill="#14B8A6"/>
+  </g>
+  <g opacity="0.2">
+    <path d="M84 951C287 757 571 695 892 748C1114 785 1325 735 1521 559" stroke="white" stroke-width="2"/>
+    <path d="M163 1026C373 835 684 786 1004 848C1197 885 1366 845 1524 712" stroke="white" stroke-width="1.4"/>
+    <path d="M94 203C284 279 510 311 757 270C1040 222 1283 240 1493 376" stroke="white" stroke-width="1.4"/>
+  </g>
+  <g opacity="0.16">
+    <circle cx="1306" cy="830" r="160" stroke="white" stroke-width="2"/>
+    <circle cx="1306" cy="830" r="232" stroke="white" stroke-width="1.2"/>
+    <circle cx="265" cy="804" r="126" stroke="white" stroke-width="1.5"/>
+  </g>
+  <g opacity="0.1">
+    <path d="M0 0H1600V1200H0V0Z" fill="url(#grid)"/>
+  </g>
+  <defs>
+    <filter id="blurA" x="-157" y="-172" width="1000" height="840" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+      <feGaussianBlur stdDeviation="100" result="effect1_foregroundBlur_1_2"/>
+    </filter>
+    <filter id="blurB" x="610" y="-160" width="1260" height="900" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+      <feGaussianBlur stdDeviation="150" result="effect1_foregroundBlur_1_2"/>
+    </filter>
+    <filter id="blurC" x="105" y="342" width="1440" height="1120" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+      <feGaussianBlur stdDeviation="150" result="effect1_foregroundBlur_1_2"/>
+    </filter>
+    <pattern id="grid" width="52" height="52" patternUnits="userSpaceOnUse">
+      <path d="M52 0H0V52" stroke="white" stroke-width="1"/>
+    </pattern>
+  </defs>
+</svg>

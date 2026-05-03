@@ -1,0 +1,21 @@
+# Local PostgreSQL for Ethara — run: docker compose up -d
+services:
+  postgres:
+    image: postgres:16-alpine
+    restart: unless-stopped
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: ethara
+      POSTGRES_PASSWORD: ethara
+      POSTGRES_DB: ethara
+    volumes:
+      - ethara_pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ethara -d ethara"]
+      interval: 3s
+      timeout: 5s
+      retries: 10
+
+volumes:
+  ethara_pgdata:

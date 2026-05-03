@@ -3,25 +3,42 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --turbopack",
-    "build": "next build --turbopack",
+    "clean": "rm -rf .next",
+    "clean:all": "rm -rf .next .next/cache node_modules/.cache/next",
+    "dev": "bash scripts/dev.sh",
+    "dev:turbo": "next dev --turbopack",
+    "postinstall": "prisma generate",
+    "build": "prisma generate && next build",
     "start": "next start",
-    "lint": "eslint"
+    "start:clean": "npm run clean:all && npm run build && npm run start",
+    "start:railway": "prisma migrate deploy && next start",
+    "lint": "eslint",
+    "db:migrate": "prisma migrate dev",
+    "db:push": "prisma db push",
+    "db:up": "docker compose up -d",
+    "db:down": "docker compose down",
+    "setup:local": "node scripts/setup-local.mjs"
   },
   "dependencies": {
+    "@prisma/client": "^6.19.3",
+    "bcryptjs": "^3.0.3",
+    "jose": "^6.2.3",
+    "next": "15.5.15",
+    "prisma": "^6.19.3",
     "react": "19.1.0",
     "react-dom": "19.1.0",
-    "next": "15.5.15"
+    "zod": "^4.4.2"
   },
   "devDependencies": {
-    "typescript": "^5",
+    "@eslint/eslintrc": "^3",
+    "@tailwindcss/postcss": "^4",
+    "@types/bcryptjs": "^2.4.6",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
-    "@tailwindcss/postcss": "^4",
-    "tailwindcss": "^4",
     "eslint": "^9",
     "eslint-config-next": "15.5.15",
-    "@eslint/eslintrc": "^3"
+    "tailwindcss": "^4",
+    "typescript": "^5"
   }
 }
